@@ -31,7 +31,7 @@ io.on('connection', (socket) => {
 
 app.use(express.static(__dirname + '/public', {
     setHeaders: function(res, path) {
-      if (mime.getType(path) === 'application/javascript') {
+      if (mime.getType(path) === 'application/javascript') { // send javascript file with type javascript
         res.setHeader('Content-Type', 'application/javascript');
       }
     }
